@@ -27,3 +27,7 @@ praktikum-03/
 ├── matrix3.js
 ├── README.md
 └── screenshot.png
+```
+
+## Hasil Program
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/257d8302-e362-4947-850d-ee2e50a484ad" />
