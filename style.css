@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f1f3f5;
+    color: #212529;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+
+    margin: 20px auto;
+}
+
+header {
+    background: white;
+
+    padding: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+
+    color: #6c757d;
+}
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+main {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 340px;
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   CANVAS
+========================= */
+
+.canvas-section {
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#glCanvas {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 8px;
+
+    background: #f8f9fa;
+}
+
+
+/* =========================
+   PANEL
+========================= */
+
+.panel {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.hud-section {
+    background: white;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hud-section h2 {
+    margin: 0 0 12px 0;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.info-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 7px 0;
+
+    font-size: 14px;
+}
+
+.info-row span:first-child {
+    color: #6c757d;
+}
+
+.info-row span:last-child {
+    font-family: monospace;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   TRANSFORM ORDER
+========================= */
+
+.transform-order {
+    text-align: center;
+}
+
+#transformOrder {
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background: #f1f3f5;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.controls {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.controls div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 13px;
+}
+
+.controls span {
+    margin-left: 5px;
+}
+
+
+/* =========================
+   KEYBOARD BUTTON
+========================= */
+
+kbd {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-width: 28px;
+    height: 26px;
+
+    padding: 3px 7px;
+
+    background: #212529;
+
+    color: white;
+
+    border-radius: 5px;
+
+    font-family: monospace;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   LEGEND
+========================= */
+
+.legend {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-size: 13px;
+}
+
+.legend div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.legend-box {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 4px;
+
+    display: inline-block;
+}
+
+.object-a {
+    background: #4dabf7;
+}
+
+.object-b {
+    background: #ff8787;
+}
+
+.legend-line {
+    width: 22px;
+    height: 3px;
+
+    display: inline-block;
+}
+
+.axis-x {
+    background: #e03131;
+}
+
+.axis-y {
+    background: #2f9e44;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    color: #6c757d;
+
+    font-size: 13px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .panel {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
