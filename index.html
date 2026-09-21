@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Praktikum 03 - WebGL2 Transformasi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Praktikum 03 - WebGL2 Transformasi</h1>
+            <p>
+                Translation, Rotation, Scaling, dan Model Matrix 3×3
+            </p>
+        </header>
+
+        <main>
+
+            <section class="canvas-section">
+                <canvas id="glCanvas" width="900" height="600">
+                    Browser tidak mendukung HTML5 Canvas.
+                </canvas>
+            </section>
+
+            <aside class="panel">
+
+                <div class="hud-section">
+                    <h2>Object A</h2>
+
+                    <div class="info-row">
+                        <span>Position</span>
+                        <span id="positionA">(0.00, 0.00)</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Rotation</span>
+                        <span id="rotationA">0.00°</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Scale X</span>
+                        <span id="scaleXA">1.00</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Scale Y</span>
+                        <span id="scaleYA">1.00</span>
+                    </div>
+                </div>
+
+
+                <div class="hud-section">
+                    <h2>Object B</h2>
+
+                    <div class="info-row">
+                        <span>Position</span>
+                        <span id="positionB">(0.00, 0.00)</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Rotation</span>
+                        <span id="rotationB">0.00°</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Scale</span>
+                        <span id="scaleB">(1.00, 1.00)</span>
+                    </div>
+                </div>
+
+
+                <div class="hud-section transform-order">
+                    <h2>Transform Order</h2>
+
+                    <div id="transformOrder">
+                        Translation → Rotation → Scaling
+                    </div>
+                </div>
+
+
+                <div class="hud-section">
+                    <h2>Controls</h2>
+
+                    <div class="controls">
+
+                        <div>
+                            <kbd>↑</kbd>
+                            <kbd>↓</kbd>
+                            <kbd>←</kbd>
+                            <kbd>→</kbd>
+                            <span>Translation</span>
+                        </div>
+
+                        <div>
+                            <kbd>Q</kbd>
+                            <kbd>E</kbd>
+                            <span>Rotation</span>
+                        </div>
+
+                        <div>
+                            <kbd>+</kbd>
+                            <kbd>-</kbd>
+                            <span>Uniform Scale</span>
+                        </div>
+
+                        <div>
+                            <kbd>Z</kbd>
+                            <kbd>X</kbd>
+                            <span>Scale X</span>
+                        </div>
+
+                        <div>
+                            <kbd>C</kbd>
+                            <kbd>V</kbd>
+                            <span>Scale Y</span>
+                        </div>
+
+                        <div>
+                            <kbd>R</kbd>
+                            <span>Reset</span>
+                        </div>
+
+                        <div>
+                            <kbd>T</kbd>
+                            <span>Toggle Transform Order</span>
+                        </div>
+
+                        <div>
+                            <kbd>1</kbd>
+                            <kbd>2</kbd>
+                            <kbd>3</kbd>
+                            <span>Transform Preset</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="hud-section">
+                    <h2>Legend</h2>
+
+                    <div class="legend">
+                        <div>
+                            <span class="legend-box object-a"></span>
+                            Object A
+                        </div>
+
+                        <div>
+                            <span class="legend-box object-b"></span>
+                            Object B
+                        </div>
+
+                        <div>
+                            <span class="legend-line axis-x"></span>
+                            X Axis
+                        </div>
+
+                        <div>
+                            <span class="legend-line axis-y"></span>
+                            Y Axis
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+        </main>
+
+        <footer>
+            <p>
+                WebGL2 Transform Practice | Object A: Keyboard Control |
+                Object B: Automatic Animation
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="matrix3.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
